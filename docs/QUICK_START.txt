@@ -1,0 +1,44 @@
+╔════════════════════════════════════════════════════════════════╗
+║      HEIC to Image Converter API - Quick Start Guide          ║
+╚════════════════════════════════════════════════════════════════╝
+
+1️⃣ JALANKAN SERVER:
+
+   ./start_api.sh
+   
+   atau manual:
+   source venv/bin/activate
+   uvicorn api:app --host 127.0.0.1 --port 8000
+
+2️⃣ TEST ENDPOINT:
+
+   curl http://127.0.0.1:8000/
+
+   curl http://127.0.0.1:8000/health
+
+   curl -X POST http://127.0.0.1:8000/convert \
+     -F "file=@photo.heic" \
+     -F "format=jpg"
+
+3️⃣ AKSES DOKUMENTASI:
+
+   • Swagger UI: http://127.0.0.1:8000/docs
+   • ReDoc: http://127.0.0.1:8000/redoc
+
+4️⃣ BACA DOKUMENTASI LENGKAP:
+
+   • API_USER_GUIDE.md - Panduan penggunaan API
+   • IMPLEMENTATION_SUMMARY.md - Technical details
+
+════════════════════════════════════════════════════════════════
+
+FITUR UTAMA:
+
+✅ Convert HEIC to JPG/PNG/JPEG
+✅ Quality control (0-100)
+✅ Resize support
+✅ Auto cleanup 24 jam
+✅ Download via URL atau langsung
+✅ Error logging & validation
+
+════════════════════════════════════════════════════════════════
